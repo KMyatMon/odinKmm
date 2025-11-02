@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <style>
+        .message { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <a href="/new">Add New Message</a>
+    <hr>
+    <% messages.forEach((message, index) => { %>
+        <div class="message">
+            <p><strong><%= message.user %>:</strong> <%= message.text %></p>
+            <small>Added: <%= message.added.toLocaleDateString() %> <%= message.added.toLocaleTimeString() %></small>
+            <a href="/message/<%= index %>">Open</a>
+        </div>
+    <% }); %>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <a href="/">Back to Index</a>
+    <hr>
+    <div>
+        <p><strong>User:</strong> <%= message.user %></p>
+        <p><strong>Message:</strong> <%= message.text %></p>
+        <p><strong>Added:</strong> <%= message.added.toLocaleDateString() %> <%= message.added.toLocaleTimeString() %></p>
+    </div>
+</body>
+</html>
